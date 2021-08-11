@@ -1,13 +1,3 @@
-#this is my first leetCode attempt
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        passed = {}
-        for i, num in enumerate(nums):
-            # check if the complement to target of integers[i], had already been in integers
-            if target - num in passed:
-                return [i, passed[target - num]]
-            else:
-                passed[num] = i
 # O(n^2) time, O(1) space
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
