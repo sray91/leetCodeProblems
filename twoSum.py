@@ -10,7 +10,6 @@
 #is in the hash table. If it is, return both the index of the number and the
 #index of the difference.
 class Solution:
-    List = [2,7,11,15]
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         values = {}
         for i, num in enumerate(nums):
