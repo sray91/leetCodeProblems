@@ -1,5 +1,6 @@
 # Import required module
 import time
+import RomantoInteger.py
 
 
 # define function to implement for loop
@@ -49,5 +50,7 @@ def reverse(x: int) -> int:
 
 # display current string values
 test_int = 123
-test_string = reverse(test_int)
-print(test_string)
+test_string = "III"
+# test_string = reverse(test_int)
+test_result = romanToInt(test_string)
+print(test_result)
