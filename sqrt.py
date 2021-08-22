@@ -7,23 +7,15 @@
 
 class Solution:
     def mySqrt(self, x: int) -> int:
-        if x == 0 or x==1:
+    # babylonian method
+        if x == 0 or x == 1:
             return(x)
-        
-        ans = 0
-        mid = 0
-        left = 0
-        right = x - 1
-        
-        while left <= right:
-            mid = (right + left)//2 # use floor division //
-            ans = mid*mid
-            # If x is greater, ignore left half
-            if ans < x:
-                left = mid + 1
-            # If x is lesser, ignore right half
-            elif ans > x:
-                right = mid - 1
-            else:
-                return(mid)
-        return(mid)            
+        else:
+            # this is the initial estimate
+            x_n = 0.5 * x
+            change = 1
+            while change > 0.1:
+                next_n = 0.5 * (x_n + x/x_n)
+                change  = abs(x_n - next_n)
+                x_n = next_n
+        return(int(x_n))   
