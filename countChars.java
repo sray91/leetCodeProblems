@@ -1,3 +1,7 @@
+// You are given a string. Count the instances of each letter and return a formatted string with each letter and its count. 
+// The input data consists of a single string. The length of the string is between 1 and 50 characters, inclusive. 
+// Each character of the string is a lower-case letter of the English alphabet.
+
 class countChars {
 // iterative solution
 void countFre(string S)
